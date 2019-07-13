@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- bootstrap Library -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- backbone Library -->
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.css">
+<title>Loading</title>
+
+<style type="text/css">
+
+</style>
+</head>
+
+<!-- Main bootstrap model for grid -->
+
+<body class="p-3 mb-2 bg-primary text-white">
+	<div class="container">
+		<h2>Click on the below button to fill form</h2>
+		<button type="button" id="new" class="btn btn-info btn-lg" data-toggle="modal"
+			data-target="#myModal">New</button>
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog  modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<a href="#addEmployeeModal" data-toggle="modal"><button class="btn btn-info" id="new">Add New Employee</button></a>
+						<button class="btn btn-danger delete" id="dlt"> Delete </button>
+						<div class="modal-body">
+							<table style="color:olive;" class="table" id="myTable">
+								<thead id="head">
+									<tr>
+										<th scope="col">First Name</th>
+										<th scope="col">Last Name</th>
+										<th scope="col">Position</th>
+										<th scope="col">Office</th>
+										<th scope="col">Salary</th>
+										<th scope="col">Status</th>
+									</tr>
+								</thead>
+								<thead id="head1">
+									<tr>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Position</th>
+										<th>Office</th>
+										<th>Salary</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody id="body" style="color:black; font-family: sans-serif;font-size: medium;font-variant: normal;">
+							
+								</tbody>
+								<tfoot id="foot">
+								</tfoot>
+							</table>
+						</div>
+						<div class="modal-footer"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="addEmployeeModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" style="color: black">Add Employee Details</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body" id="foradd"></div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info add"data-dismiss="modal">Add</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+ 	<div id="editEmployeeModal" class="modal fade">
+ 		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" style="color: black">Edit Employee Details</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body" id="foredit"></div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info update"data-dismiss="modal">Update</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
+<script src="https://cdn.datatables.net/plug-ins/1.10.15/api/row().show().js"></script>
+    
+    <script type="text/template" class="blogs-list-template">
+	<td><%= FirstName %></td>
+ 	<td><%= LastName %></td> 	
+    <td><%= Position %></td>
+    <td><%= Office %></td>
+    <td><%= Salary %></td>
+    <td><%= Status %></td>
+    </script>
+    
+    <script type="text/javascript" src="View.js"></script>
+	<script type="text/javascript" src="Model.js"></script>
+	<script type="text/javascript" src="Collection.js"></script>
+	<script type="text/javascript" src="Add.js"></script>
+	<script type="text/javascript" src="Edit.js"></script>
+	<script type="text/javascript" src="Delete.js"></script>
+	<script type="text/javascript" src="ModelView.js"></script>
+
+	<script>
+	
+		
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div id="addEmployeeModal" class="modal fade"> -->
+<!-- 		<div class="modal-dialog"> -->
+<!-- 			<div class="modal-content"> -->
+<!-- 				<div class="modal-header"> -->
+<!-- 					<h4 class="modal-title" style="color: black">Fill Below Details</h4> -->
+<!-- 						<button type="button" class="close" data-dismiss="modal">&times;</button> -->
+<!-- 					</div> -->
+<!-- 							     <div class="modal-body"> -->
+<!-- 										<label style="color: black;">First Name</label>  -->
+<!-- 										<input class="form-control First-Name-input" placeholder="First Name" autofocus="autofocus">  -->
+<!-- 										<label style="color: black;">Last Name</label> -->
+<!-- 										<input class="form-control Last-Name-input" placeholder="Last Name" autofocus="autofocus">  -->
+<!-- 										<label style="color: black;">Position</label> -->
+<!-- 										<input class="form-control Position-Name-input" placeholder="Position" autofocus="autofocus"> -->
+<!-- 										<label style="color: black;">Office</label> -->
+<!-- 										<input class="form-control Office-input" placeholder="Office Name" autofocus="autofocus"> -->
+<!-- 										<label style="color: black;">Salary</label> -->
+<!-- 										<input class="form-control Salary-input" placeholder="Salary" autofocus="autofocus"> -->
+<!-- 									</div> -->
+<!-- 									<div class="modal-footer"> -->
+<!-- 									   <button type="button" class="btn btn-danger" -->
+<!-- 											data-dismiss="modal">Close</button> -->
+<!-- 											 <button type="button" class="btn btn-danger add" -->
+<!-- 											data-dismiss="modal">Add</button> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div id="addEmployeeModal" class="modal fade"> -->
+<!-- 		<div class="modal-dialog"> -->
+<!-- 			<div class="modal-content"> -->
+<!-- 				<form> -->
+<!-- 					<div class="modal-header"> -->
+<!-- 						<h4 class="modal-title" style="color: black; font-weight: bold;">Add -->
+<!-- 							Employee Details</h4> -->
+<!-- 						<button type="button" class="close" data-dismiss="modal" -->
+<!-- 							aria-hidden="true">&times;</button> -->
+<!-- 					</div> -->
+<!-- 					<div class="modal-body"> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<label style="color: black;">First Name</label> <input -->
+<!-- 								type="text" class="form-control" required> -->
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<label style="color: black;">Last Name</label> <input type="text" -->
+<!-- 								class="form-control" required> -->
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<label style="color: black;">Position</label> <input type="text" -->
+<!-- 								class="form-control" required> -->
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<label style="color: black;">Office</label> <input type="text" -->
+<!-- 								class="form-control" required> -->
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<label style="color: black;">Salary</label> <input type="number" -->
+<!-- 								class="form-control" required> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class="modal-footer"> -->
+<!-- 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">  -->
+<!-- 					    <input type="submit" class="btn btn-success" id="add" value="Add"> -->
+<!-- 					</div> -->
+<!-- 				</form> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+					
